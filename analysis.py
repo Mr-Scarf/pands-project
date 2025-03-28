@@ -26,4 +26,43 @@
                         #   You should not be thinking of using spreadsheet software like Excel to do your calculations.  
 
 
+# i -  Import libraries that will be required for the project
 
+import sklearn as skl                                      # Machine learning Library that contains sample datasets
+import sklearn.datasets                                    # datasets is submodule of sklearn module , used in this project
+import matplotlib.pyplot as plt                            # Used for plotting graphs
+import pandas as pd                                        # Used to analayse data
+import numpy as np                                         # Used for large datasets to perform numerical computing
+import sys                                                 # The 'sys' module provides functions and variables used to manipulate different parts of the Python runtime environment.
+
+
+
+data = skl.datasets.load_iris()                           #Load the iris dataset from scikit-learn
+
+df = pd.DataFrame(data.data, columns=data.feature_names)  # Convert to Pandas Dataframe
+
+#print(data)
+
+# Comments: sklearn used for import of iris dataset - covered in Principles of Data Analytics course.
+# Reference https://stackoverflow.com/questions/38105539/how-to-convert-a-scikit-learn-dataset-to-a-pandas-dataset
+
+
+
+# 1 - Output a summary of each variable to a single text file. 
+
+# The four variables in the dataset are:
+# - sepal length (cm) , sepal width (cm) , petal length (cm) , petal width (cm)
+
+print(df.head())                                           # df.head shows us the first 5 rows of the dataset & the variable data that has been collected
+
+print(df.shape)                                            # df.shape shows us the size of the dataset(rows & columns) that we are working with
+
+print(df.describe())                                       # df.describe() is used to show statistical data about the Iris dataset such as Mean, Minimum, Maximum, Standard Deviation & Median
+
+
+# Comments: df head/shape/desribe - covered in Principles of Data Analytics course.
+# Reference 
+
+
+
+# 2 - Saves a histogram of each variable to png files
