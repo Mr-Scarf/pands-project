@@ -65,4 +65,36 @@ print(df.describe())                                       # df.describe() is us
 
 
 
-# 2 - Saves a histogram of each variable to png files
+# 2 - Saves a histogram of each variable to png files - 
+# 6th April Comment - Add link from datacamp & use ref in D.A project. iloc not requires as I have not added target names as numerical column in this modeule as of yet(Review if required & to keep consistenet)
+
+print(df.columns)
+
+#From Data Analyics course - Applicable columns are first 4, dataset will include the added columns of species', 'species_name' so subset needed for 4 feautures
+# iloc used to create subset for required features only format is row,columns
+df_subset_features=df.iloc[:, 0:4]
+
+# Plot histogram of Features.
+df_subset_features.hist(bins =20,alpha = .9 , color='skyblue', edgecolor='black')
+
+
+# Add axis lables
+plt.xlabel('Value')
+plt.ylabel('Count')
+
+# Set the title for all histograms - Reference: SuperTitle:  https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.suptitle.html
+plt.suptitle("Histogram : Features of Iris Dataset",fontweight='bold')  # Supertitle for all histograms
+
+# Show the plot
+plt.show()
+
+
+
+
+
+
+
+
+# 3. Outputs a scatter plot of each pair of variables.  
+
+
