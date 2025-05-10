@@ -5,7 +5,9 @@
 **Author**: David Scally  
 **University**: Atlantic Technological University  
 **Module**: Programming and Scripting 
-**Class**: January 2025  
+**Class**: January 2025 
+
+This repository contains an analysis of the Iris flower dataset using Python and Jupyter Notebook, as part of the Principles of Programming and Scripting module.
 
 ## Iris Flowers
 ![Iris Flowers](https://editor.analyticsvidhya.com/uploads/51518iris%20img1.png)
@@ -29,20 +31,38 @@ It contains 150 iris flower samples from 3 different species & 4 features per sa
 - Petal Width
 
 
+The module project requirements are set out below. 
+
+1. Research the data set online and write a summary about it in your README.  
+2. Download the data set and add it to your repository.  
+3. Write a program called analysis.py that:  
+  1. Outputs a summary of each variable to a single text file,  
+  2. Saves a histogram of each variable to png files, and  
+  3. Outputs a scatter plot of each pair of variables.  
+  4. Performs any other analysis you think is appropriate. 
+
+
+In addition, we will create a Jupyter notebook 'Analysis.ipynb' to group our code & analysis.
+
 ## Repository Contents
 
+ - README.md - This file, used to explain the project
+ - iris.dataset - Downloaded raw dataset from the UC Irvine (UCI) Machine Learning Repository Archive - https://archive.ics.uci.edu/dataset/53/iris
  - analysis.ipynb - Jupyter notebook for Data Analysis of Iris Dataset
+ - Iris Dataset - Summary Statistics.txt - Output of iris data summary statistics saved in a text file
+ - Histograms - Output of iris dataset variable histograms saved in a png file
+ - analysis.py - Python file with code used in analysis
  - requirements.txt - List of packages used in the analysis
- - README - This file, used to explain the project
+ - gitignore - Lists files that git should ignore
+
 
 
 ## Structure of Analysis
 
-We will explore the dataset by following the below steps:
+We will explore the dataset by following the below steps in the Jupyter notebook 'Analysis.ipynb' :
 
-1.  **Explain Libraries Used**
+1.  **Summary of the Dataset & explain the Python libraries Used**
 List and brief explanation of python libraries that will be used to explore the iris dataset.
-
 
 2.  **Source & Explore the Iris dataSet**
 The original iris dataset can be downloaded as a csv file format from the UCI website - https://archive.ics.uci.edu/dataset/53/iris
@@ -52,28 +72,26 @@ Initial inspection includes checking data types, size, and a preview of the data
 
 
 3.  **Summarise the Data**
-Descriptive statistics (mean,min,max,standard deviation,median) are generated using `.describe()`
+Descriptive statistics (mean,min,max,standard deviation,median) are generated using `.describe()` & saved to a text file.
 
 4.  **Visualise Features -Histogram**
-Used `matplotlib` to create histograms to understand the distribution of each feature.
+Used `matplotlib` to create histograms to understand the distribution of each feature & saved to a png file.
 
 5.  **Investigate *& Analyse Relationships - Scatter Plot**
-Created a scatter plot of two features to show relationship between 'petal length (cm)' & 'petal width (cm)'
-Use numpy.polyfit to add a regression line to the scatter plot of 'petal length (cm)' & 'petal width (cm)'
+Used 'seaborn' to create a pairplot of the features & discuss what the pairplot depicts.
+Created an additional scatter plot of two features - 'petal length (cm)' & 'petal width (cm)' - and added a regression line using 'numpy.polyfit'  to show the distribution of the data.
 
-6.  **Analyse Class Distributions**
+6.  **Other Analysis - Fit a Simple Linear Regression**
+Calculated the coefficient of determination r²
+
+7.  **Analyse Class Distributions**
 Create box-plots of the petal lengths for each of the three classes using color-coded plots.
 
-7.  **Other Analysis - Compute Correlations**
-Calculate the correlation coefficients between the features & displayed the results as a heatmap using matplotlib.
+8.  **Other Analysis - Compute Correlations**
+Calculate the correlation coefficients between the features & displayed the results as a heatmap using 'matplotlib'.
 
-8.  **Other Analysis - Fit a Simple Linear Regression**
-Calculated the coefficient of determination r² & fitted it to a scatter plot
-
-9. **Other Analysis - Pairplot**
-Used seaborn to create a pairplot of the data set & discuss what the pairplot depicts.
-
-10. **Summary**
+9. **Conclusion**
+Closing comments on the analysis & key findings.
 
 
   ## Installation
@@ -86,7 +104,7 @@ git clone https://github.com/Mr-Scarf/principles_of_data_analytics.git
 
 pip install -r requirements.txt
 
-3. Open file `tasks.ipynb` Jupyter notebook  and run the tasks.
+3. Open file `tasks.ipynb` Jupyter notebook  and run the code cells.
 
 
 
