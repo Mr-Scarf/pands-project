@@ -26,7 +26,7 @@
                         #   You should not be thinking of using spreadsheet software like Excel to do your calculations.  
 
 
-# i -  Import libraries that will be required for the project
+## Task 1: Summary of the Dataset & explain the Python libraries Used
 
 import sklearn as skl                                      # Scikit-learn (sklearn) - Machine learning Library that contains sample datasets - used in this project to load the iris dataset
 import sklearn.datasets                                    # Scikit-learn datasets  - specific sub- module of sklearn library used to load the iris datatset
@@ -39,7 +39,10 @@ import os                                                  # Operating System - 
 import scipy as sp                                         # Scipy - A library for scientific computing, used for statistical regressions
 
 
+###########################################################################################################
 
+
+## Task 2: Source & Explore the Iris dataSet
 
 data = skl.datasets.load_iris()                           #Load the iris dataset from scikit-learn
 
@@ -51,10 +54,10 @@ print(data)
 # Reference https://stackoverflow.com/questions/38105539/how-to-convert-a-scikit-learn-dataset-to-a-pandas-dataset
 
 
+###########################################################################################################
 
 
-
-# 1 - Output a summary of each variable to a single text file. 
+## ** Task 3 - Summarise the Data ** Summary Statistics 
 
 # The four variables in the dataset are:
 # - sepal length (cm) , sepal width (cm) , petal length (cm) , petal width (cm)
@@ -128,7 +131,7 @@ df['species_name'] = df['species'].map(lambda x: data.target_names[x])
 
 
 
-## ** Task 3 -Visualise Features -Histogram
+## ** Task 4 -Visualise Features -Histogram
 # Saves a histogram of each variable to png files - 
 
 # Review columns in DF
@@ -185,13 +188,6 @@ plt.show()
 ###########################################################################################################
 
 
-
-
-
-
-
-
-# 3. Outputs a scatter plot of each pair of variables.  
 
 
 ## Task 5 - Investigate & Analyse Relationships - Scatter Plot (i)**
@@ -318,7 +314,7 @@ print(f"The R² value coefficient shows a value of {r_squared * 100}%")
 
 ###########################################################################################################
 
-## Task 7: Analyse Class Distributions
+## Task 7: Analyse Class Distributions - Boxplot
 
 # Create figure, axis.
 fig, ax = plt.subplots()
@@ -355,7 +351,7 @@ plt.title('Box plot - Petal Length (cm)')
 ###########################################################################################################
 
 
-# 8.  **Other Analysis - Compute Correlations**
+# 8.  **Other Analysis - Compute Correlations** Correlation Heatmap
 
 
 #Applicable columns are first 4, dataset will include the added columns of species', 'species_name' so subset needed.
