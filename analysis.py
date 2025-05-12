@@ -106,13 +106,13 @@ with open('Iris Dataset - Summary Statistics.txt','w') as file:             # Cr
 
 # Addition of extra columns to dataframe
 
-# Add new column 'species' which lables the species numerically ()
+# Add new column 'species' which labels the species numerically ()
 # Allows us to analyse the data per species . If this was not added the three flower species would be grouped.
 
 df['species'] = data.target
 
 # Adds new colum 'species_name' with the species names('setosa', 'versicolor', 'virginica). 
-# Lamda function matches each value of x to the name from the  data.target_names - see Reference 'chatgpt'
+# Lambda function matches each value of x to the name from the  data.target_names - see Reference 'chatgpt'
 
 df['species_name'] = df['species'].map(lambda x: data.target_names[x])
 
@@ -140,21 +140,21 @@ print(df.columns)
 # Make sure folder where you want to save the png file exists - Reference os.mkdirs
 os.makedirs("Histograms", exist_ok=True)  # Creates the folder if it doesn't exist
 
-#From Data Analyics module - Applicable columns are first 4, dataset will include the added columns of species', 'species_name' so subset needed for 4 feautures
+#From Data Analytics module - Applicable columns are first 4, dataset will include the added columns of species', 'species_name' so subset needed for 4 features
 # iloc used to create subset for required features only format is row,columns
 df_subset_features=df.iloc[:, 0:4]
 
 # Plot histogram of Features.
 axes = df_subset_features.hist(bins =20,alpha = .9 , color='skyblue', edgecolor='black')
 
-# Add axis lables                                           #Note - plt.xlabel/ylabel will only show axis labels for the last plot instead of for each histogram
+# Add axis labels                                           #Note - plt.xlabel/ylabel will only show axis labels for the last plot instead of for each histogram
 # plt.xlabel('Value')
 # plt.ylabel('Count')
 
 # Flatten the 2D array of axes into a list
 axes = axes.flatten()
 
-# Add lables per subplot using for loop
+# Add labels per subplot using for loop
 for ax in axes:
     ax.set_xlabel('Value')
     ax.set_ylabel('Count')
@@ -192,7 +192,7 @@ plt.show()
 
 ## Task 5 - Investigate & Analyse Relationships - Scatter Plot (i)**
 
-# We will need to amend the df_subset if we are to split the colours per flower species. In earlier itteration the graphs only showed with the features grouped which made it hard to distinguish
+# We will need to amend the df_subset if we are to split the colours per flower species. In earlier iteration the graphs only showed with the features grouped which made it hard to distinguish
 # Amended df_subset
 df_subset = df[['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)', 'species_name']]
 
@@ -300,7 +300,7 @@ sp.stats.linregress(x,y)
 #We use sp.stats.linregress to calculate:
 #1. Slope and Intercept of best fit line or regression line
 #2. Get the r value - the correlation of values ( We will need this to calculate the coefficient of determination r² )
-#3. Get the p-value - statistial signifance of relationship
+#3. Get the p-value - statistical signifance of relationship
 #4. Get standard error  - how values deviates from best fit line
 
 # Assign line to variable 'fit'
@@ -355,7 +355,7 @@ plt.title('Box plot - Petal Length (cm)')
 
 
 #Applicable columns are first 4, dataset will include the added columns of species', 'species_name' so subset needed.
-#iloc used similar to above for aplicabale columsn only
+#iloc used similar to above for applicable columns only
 df_subset=df.iloc[:, 0:4]
 #print(df_subset)
 

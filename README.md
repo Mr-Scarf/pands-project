@@ -67,7 +67,7 @@ List and brief explanation of python libraries that will be used to explore the 
 
 2.  **Source & Explore the Iris dataSet**
 The original iris dataset can be downloaded as a csv file from the UCI website - https://archive.ics.uci.edu/dataset/53/iris
-We have stored a csv copy in the repository for reference - see 'Iris datset' but we also can use the python libraries built in loader , **scikit-learn**, to import the data set directly into the Jupyer notebook - we will use the latter method.
+We have stored a csv copy in the repository for reference - see 'Iris dataset' but we also can use the python libraries built in loader , **scikit-learn**, to import the data set directly into the Jupyter notebook - we will use the latter method.
 The Iris dataset is loaded using `sklearn.datasets.load_iris()` and converted into a pandas DataFrame. A comparison between the raw dataset from sklearn vs converted pandas DataFrame
 Initial inspection includes checking data types, size, and a preview of the dataset using `df` and `.info()`.
 
